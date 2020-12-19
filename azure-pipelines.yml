@@ -137,6 +137,9 @@ stages:
         versionSpec: 14.x
       displayName: 'Install Node.js'
     - script: |
+        sudo apt-get install -y libudev-dev
+      displayName: Install libudev
+    - script: |
         yarn global add lerna
         yarn bootstrap
       name: Bootstrap
