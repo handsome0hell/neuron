@@ -50,13 +50,13 @@ stages:
         node_14_x:
           node_version: 14.x
     steps:
-      - script: |
-          sudo apt-get install -y libudev-dev
-        displayName: Install libudev
     - task: NodeTool@0
       inputs:
         versionSpec: $(node_version)
       displayName: 'Install Node.js'
+    - script: |
+        sudo apt-get install -y libudev-dev
+      displayName: Install libudev
     - script: |
         yarn global add lerna
         yarn bootstrap
