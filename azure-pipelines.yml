@@ -27,7 +27,7 @@ stages:
     strategy:
       matrix:
         node_12_x:
-          node_version: 12.x
+          node_version: 14.x
     steps:
     - task: NodeTool@0
       inputs:
@@ -48,7 +48,7 @@ stages:
     strategy:
       matrix:
         node_12_x:
-          node_version: 12.x
+          node_version: 14.x
     steps:
     - task: NodeTool@0
       inputs:
@@ -72,7 +72,7 @@ stages:
     strategy:
       matrix:
         node_12_x:
-          node_version: 12.x
+          node_version: 14.x
     steps:
     - task: NodeTool@0
       inputs:
@@ -101,7 +101,7 @@ stages:
     steps:
     - task: NodeTool@0
       inputs:
-        versionSpec: 12.x
+        versionSpec: 14.x
       displayName: 'Install Node.js'
     - script: |
         yarn global add lerna
@@ -131,7 +131,7 @@ stages:
     steps:
     - task: NodeTool@0
       inputs:
-        versionSpec: 12.x
+        versionSpec: 14.x
       displayName: 'Install Node.js'
     - script: |
         yarn global add lerna
@@ -152,7 +152,7 @@ stages:
     steps:
     - task: NodeTool@0
       inputs:
-        versionSpec: 12.x
+        versionSpec: 14.x
       displayName: 'Install Node.js'
     - script: yarn global add lerna
       displayName: 'Install lerna'
