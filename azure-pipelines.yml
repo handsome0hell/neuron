@@ -55,7 +55,7 @@ stages:
         versionSpec: $(node_version)
       displayName: 'Install Node.js'
     - script: |
-        sudo apt-get install -y libudev-dev
+        sudo apt-get install build-essential libudev-dev
       displayName: Install libudev
     - script: |
         yarn global add lerna
@@ -137,7 +137,7 @@ stages:
         versionSpec: 12.x
       displayName: 'Install Node.js'
     - script: |
-        sudo apt-get install -y libudev-dev
+        sudo apt-get install build-essential libudev-dev
       displayName: Install libudev
     - script: |
         yarn global add lerna
